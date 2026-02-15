@@ -41,7 +41,7 @@ async function sendEmail() {
 
     const info = await transporter.sendMail({
       from: '"Agentall AI" <admin@agentall.ai>',
-      to: "li.xu@mtcsys.cn",
+      cc: "li.xu@mtcsys.cn",
       bcc: recipients,
       subject: "Agentall APAC Acceleration Campaign",
       html: htmlContent,
