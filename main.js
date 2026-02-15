@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
 async function sendEmail() {
   try {
     const htmlContent = fs.readFileSync(
-      path.join(__dirname, "main-5.html"),
+      path.join(__dirname, "main.html"),
       "utf-8"
     );
 
@@ -40,8 +40,8 @@ async function sendEmail() {
     console.log(`📧 准备发送给 ${recipients.length} 个收件人`);
 
     const info = await transporter.sendMail({
-      from: '"Agentall Campaign" <admin@agentall.ai>',
-      to: "admin@agentall.ai",
+      from: '"Agentall AI" <admin@agentall.ai>',
+      to: "li.xu@mtcsys.cn",
       bcc: recipients,
       subject: "Agentall APAC Acceleration Campaign",
       html: htmlContent,
